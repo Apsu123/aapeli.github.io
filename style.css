@@ -1,0 +1,200 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f7fa;
+  color: #333;
+}
+
+header {
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 1em;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+nav button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.6em 1.2em;
+  border-radius: 30px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+nav button:hover {
+  background-color: #0056b3;
+}
+
+nav .signin {
+  background-color: #28a745;
+}
+
+nav .signin:hover {
+  background-color: #1e7e34;
+}
+
+main {
+  padding: 2em;
+  text-align: center;
+}
+
+/*HOME*/
+
+.projects {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  flex-wrap: wrap;
+  margin-top: 2em;
+}
+
+.project-card {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  height: 400px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.image-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 8px;
+  background-color: rgba(0, 0, 0, 0.6); /* semi-transparent background */
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card img {
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+}
+
+
+/*Learning Hub*/
+
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2em;
+}
+
+/* Individual column section */
+.column {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+/* Resizable text areas */
+textarea {
+  resize: vertical;
+  min-height: 200px;
+  padding: 1em;
+  font-size: 1.5em;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Button row layout */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
+/* General button styling */
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.6em 1.2em;
+  border-radius: 30px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  flex: 1;
+  min-width: 100px;
+}
+
+/* Hover effect for main buttons */
+
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Style for "CLEAR" button */
+.clear {
+  background-color: #ffc107;
+}
+.clear:hover {
+  background-color: #e0a800;
+}
+
+/* Style for "HOW TO?" button */
+.howto {
+  background-color: #6c757d;
+}
+.howto:hover {
+  background-color: #5a6268;
+}
+
+/* Image section styling */
+.image-box {
+  text-align: center;
+  margin-bottom: 2em;
+}
+.image-box img {
+  max-width: 10%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+  .column {
+    flex: 1 1 100%;
+  }
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Learning Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <nav>
+      <button onclick="goTo('index.html')">Home</button>
+      <button onclick="goTo('b2.html')">Learning Hub</button>
+      <button onclick="goTo('b3.html')">Health Corner</button>
+      <button class="signin" onclick="goTo('signin.html')">Sign in</button>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Welcome to Learning Hub</h1>
+    <!-- Image Placeholder -->
+    <div class="image-box">
+      <img src="SmartFrog.png" alt="Learning Hub Image">
+    </div>
+
+    <!-- Main Input Section -->
+    <div class="container">
+
+      <!-- Left Side: Text Input + Buttons -->
+      <div class="column">
+        <label for="inputText">Enter text here</label>
+        <textarea id="inputText" placeholder="Type your text here..." spellcheck="false"></textarea>
+
+        <div class="button-group">
+          <button onclick="actionA1()">A1🔤</button>
+          <button onclick="actionGo()">GO ▶</button>
+        </div>
+      </div>
+
+      <!-- Right Side: Vocabulary Input + Buttons -->
+      <div class="column">
+        <label for="vocabText">Enter vocabulary</label>
+        <textarea id="vocabText" placeholder="Type vocabulary here..." spellcheck="false"></textarea>
+
+        <div class="button-group">
+          <button class="clear" onclick="actionClear()">CLEAR</button>
+          <button class="howto" onclick="actionHowTo()">HOW TO?</button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

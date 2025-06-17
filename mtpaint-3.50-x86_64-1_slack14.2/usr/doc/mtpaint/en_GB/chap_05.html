@@ -1,0 +1,338 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<META NAME="generator" CONTENT="http://txt2tags.org">
+<TITLE>The mtPaint Handbook - Chapter 5 - Image Viewing</TITLE></HEAD><BODY BGCOLOR="white" TEXT="black">
+<CENTER>
+</CENTER>
+
+
+<H1>5. Image Viewing</H1>
+
+<P>
+Basic image viewing and manipulation can be achieved without having all of the
+toolbars on display. You toggle a toolbar on or off using the View menu, which
+allows you to make the interface much less cluttered when you don't need these
+extra features. Here is a screenshot of what mtPaint looks like with just the
+main toolbar switched on:
+</P>
+<P>
+<IMG ALIGN="middle" SRC="../img/5.png" BORDER="0" ALT="">
+</P>
+<P>
+All basic image manupulation can be done with a few clicks of the mouse or a few
+keystrokes: Zooming, panning, cropping, scaling and adjusting the colours. If
+you take the time to learn these keyboard and mouse shortcuts, they can really
+increase your work satisfaction and productivity.
+</P>
+
+<H2 ID="SEC1">5.1 Zooming and Panning</H2>
+
+<P>
+At any time you can zoom in or out using the + or - keys. You can also zoom to a
+preset value by pressing the number keys 1-9. It is sometimes useful to navigate
+around the image by pressing the End key to bring up the pan window. This window
+displays a thumbnail of the current image which you can use to position the
+current view with. To do this you either press the arrow keys to move or click
+on the thumbnail using the mouse. The size of the thumbnail is set using the
+Preferences window.
+</P>
+<P>
+If you enable 'Mouse Scroll Wheel = Zoom' in the Preferences window, rotating
+your mouse scroll wheel when the cursor is over the canvas will zoom it in or out,
+instead of scrolling down or up.
+</P>
+
+<H3 ID="SEC11">5.1.1 Zooming to a Particular Area</H3>
+
+<P>
+If you wish to zoom into a particular area of the image you can do this by
+positioning the mouse pointer over the area you want as the centre and then
+pressing the middle mouse button. If you then zoom in, this point on the canvas
+will be the new centre of the current view.
+</P>
+<P>
+If 'Zoom on cursor position' is enabled in the Interface section of the
+Preferences window, then without the middle click, zooming in will be centered
+on the point where the cursor is at the moment. The middle click is still useful,
+however, for when you select the new zoom from the dropdown on the toolbar as
+the cursor being over the dropdown is not a good reference point.
+</P>
+
+<H2 ID="SEC2">5.2 Full View Mode</H2>
+
+<P>
+At any time you can hide all of the menus, toolbars, palette and status bar in
+order to view as much of the image as possible. To do this use 'Toggle Image
+View' from the View menu, or simply press the Home
+key. Pressing the Home key again will return the controls.
+</P>
+
+<H2 ID="SEC3">5.3 Image File List</H2>
+
+<P>
+If you started mtPaint by passing more than one filename at the command line
+such as '<B>mtpaint *.jpg</B>', these filenames will be put into a list in a window.
+Then whenever you click on the filename, this image will be loaded into mtPaint.
+This can be useful for editing animation frames, or working with several digital
+photos.
+</P>
+<P>
+In the Windows version of mtPaint this feature can be used by selecting
+the image files in Explorer, right clicking and using the 'Send To' option to
+send them to mtPaint; or otherwise, mtPaint can take a wildcard pattern and
+find the files on its own if you use "-w" option, like this:
+'<B>mtpaint -w "*.jpg"</B>'. This option may prove useful on GNU/Linux system as
+well, in case there are too many matching files to fit into command line (rather
+unlikely, given its size limit of 64 Kb at least, and usually much more - see
+'<B>getconf ARG_MAX</B>' - but possible).
+</P>
+<P>
+Here is an example of what you can do using this procedure, along with a pan
+window and the main window toggled to full view:
+</P>
+<P>
+<IMG ALIGN="middle" SRC="../img/5.3.jpg" BORDER="0" ALT="">
+</P>
+<P>
+To toggle the dock area off press F12 or use the View menu.
+</P>
+<P>
+In case mtPaint is run by the <B>find</B> command, option "--sort" will prove
+useful, as <B>find</B> on its own does not sort the filenames it feeds to the
+program it executes. For example, to view all JPG files under current directory,
+in alphabetical order:
+</P>
+<P>
+find ./ -iname '*.jpg' -exec mtpaint --sort '{}' +
+</P>
+<P>
+Alternately, you can save the list of filenames into a file, sort it, etc. then
+pass it to mtPaint: '<B>mtpaint --flist files.txt</B>'.
+</P>
+
+<H2 ID="SEC4">5.4 The View Window</H2>
+
+<P>
+When you are editing an image at a high zoom, it is sometimes useful to have a
+second image at 100% to see what it looks like, but without having to zoom in
+and out. This is what the View Window allows you to do. The view window can be
+toggled on or off by pressing the 'V' key or by using the View menu. The zoom
+setting for the view window is set by using the second combo box on the main
+toolbar. By default when you move a scrollbar on the main edit window this will
+also move the image focus in the view window. To turn this feature off, you must
+toggle the option on the View menu.
+</P>
+<P>
+Here is an example of what the view window can be used for:
+</P>
+<P>
+<IMG ALIGN="middle" SRC="../img/5.4.png" BORDER="0" ALT="">
+</P>
+
+<H2 ID="SEC5">5.5 Image Tracing</H2>
+
+<P>
+Instead of drawing from memory, you can set up a tracing image to help you
+reproduce its contours and colours. A tracing image can help even a person not
+blessed with artistic talent to create a passable tile image or icon.
+</P>
+<P>
+First you should prepare the image you want to trace. Load it into mtPaint, and
+if you want only some part of it as a tracing image, either crop it or copy
+that part to clipboard.
+</P>
+<P>
+Then select 'Tracing Image' from the View menu. There, select 'Image' or
+'Clipboard' as the source, depending on where your prepared image is. Then, set
+the relative scale if you want the new canvas image to be smaller than the
+original image. For example, if you are tracing around a 640x480 image on a
+canvas that is 80x60 pixels then the relative scale will be 8. Then check the
+'Display' box and press OK.
+</P>
+<P>
+From then on, your tracing image will take the place of the default chequered
+background, showing through the transparent areas of your images.
+</P>
+<P>
+Now create a new image, and then set the black background as transparent by
+pressing Ctrl+P and setting the transparency index to 0 in the Files tab.
+Alternately, you can create an empty alpha channel using 'Channels-&gt;New'. Then
+the tracing image will show through your now-transparent canvas image.
+</P>
+<P>
+The screenshot below shows the typical setup for tracing:
+</P>
+<P>
+<IMG ALIGN="middle" SRC="../img/5.5a.png" BORDER="0" ALT="">
+</P>
+<P>
+See the canvas window on a high zoom, displaying a tracing image overlaid by a
+partially drawn 32x32 tile and a zoom grid; and the view window displaying that
+same tile at 1:1 scale.
+</P>
+<P>
+Also notice the different grid colours over the drawn part, the transparent
+part, and at their boundary; this is the "Smart grid" feature in action. It
+exists to help you see which pixels are already drawn, and which are still
+transparent. You can enable it, and choose the three colours to use for it, in
+the 'Configure grid' dialog in the View menu.
+</P>
+<P>
+Note that mtPaint not only shows you the tracing image, but allows you to pick
+colours from it. If you Ctrl+click on a transparent pixel over the tracing
+image, colour is picked from tracing image's pixel under the cursor. And
+Ctrl+double click picks the colour which is a gamma corrected average of all
+tracing image's pixels under the canvas pixel you've clicked in; this is useful
+when the relative scale is larger than 1, like in the example above.
+</P>
+<P>
+You can also move the tracing image using Ctrl + arrow keys, or change its origin
+in the 'Tracing Image' window. Note that in absence of tracing image,
+Ctrl + arrow keys move the current layer relative to other layers; when a tracing
+image is present, it takes precedence, while layer can be moved by the spins in
+the Layers window.
+</P>
+<P>
+Below you can see the final stages of turning a tracing image into a small
+tile:
+</P>
+<P>
+<IMG ALIGN="middle" SRC="../img/5.5b.png" BORDER="0" ALT="">
+</P>
+<P>
+<IMG ALIGN="middle" SRC="../img/5.5c.png" BORDER="0" ALT="">
+</P>
+<P>
+And the finished tile itself:
+</P>
+<P>
+<IMG ALIGN="middle" SRC="../img/5.5d.png" BORDER="0" ALT="">
+</P>
+
+<H2 ID="SEC6">5.6 Zoom Grid</H2>
+
+<P>
+Zoom grid makes it easier to edit images at a high zoom. You can enable or
+disable it using 'View-&gt;Show Zoom Grid' menu option.
+</P>
+<P>
+Using the 'Configure grid' dialog in the same View menu, you can choose the
+grid colour, and the minimum zoom factor at which the grid becomes visible.
+If the "Smart grid" option is checked, the grid is displayed in three different
+colours - the "Opaque" one is used for grid lines between opaque pixels,
+"Border" is for lines separating an opaque and a transparent pixel, and
+"Transparent", for lines between transparent pixels. If the option is unchecked,
+only the "Opaque" colour is used.
+</P>
+<P>
+From the same dialog, you can also enable the tile grid, useful for visually
+separating tiles in a tileset, configure its colour, and horizontal and vertical
+spacing. Unlike the zoom grid, tile grid, if enabled, is displayed for all zoom
+factors.
+</P>
+<P>
+Toggle on the "Preview" button if you want to dynamically see how the changes
+you make to the grid will look on the canvas.
+</P>
+
+<H2 ID="SEC7">5.7 Dock Pane</H2>
+
+<P>
+When the settings toolbar or the layers window are not displayed as separate
+windows, they instead reside in the dock pane, which is on the right side of
+the main window. This arrangement is sometimes more convenient, particularly on
+widescreen displays. The image file list, if present, occupies a separate tab in
+the dock pane.
+</P>
+<P>
+The dock area can be toggled on or off by F12 key, or through the View menu.
+Its width can be changed by dragging the separator between main window and dock,
+and is remembered across sessions.
+</P>
+<P>
+The height of the layers window in the dock pane can be changed by dragging the
+separator under it up or down, and too is remembered across sessions. While the
+drag handle is near or totally invisible with some (many?) GTK+ themes, it
+<B>is</B> there nevertheless. See the red ellipse on the image below, an invisible
+handle is in there somewhere:
+</P>
+<P>
+<IMG ALIGN="middle" SRC="../img/5.7.png" BORDER="0" ALT="">
+</P>
+<P>
+When some window in dock area is selected and is taking the input, arrow keys
+will navigate through its fields, instead of moving the mouse cursor over the
+canvas. To release input from the dock, press the Escape key.
+</P>
+
+<H2 ID="SEC8">5.8 Status Bar</H2>
+
+<P>
+Information displayed on the status bar can be useful to guide you in your
+various image editing tasks. If you learn where and how to look for what.
+</P>
+<P>
+What is and isn't displayed, you can choose in the "Status Bar" section of the
+Preferences window. There are 5 blocks:
+</P>
+
+<UL>
+<LI><B>Canvas Geometry</B> is the current channel (if not the image channel), current
+width and height of the canvas, number of colours in the indexed palette (or
+"RGB" in RGB mode), what extra channels are present, and what palette index is
+transparent if any: "<B>Alpha 256x512x16+ASM (T=0)</B>" means you are working on the
+alpha channel of a 256 pixels wide and 512 pixels high 16-colour indexed image,
+with alpha, selection, and mask channels, and transparent colour 0.
+<P></P>
+<LI><B>Cursor X,Y</B> is exactly what it says; the X and Y coordinates of the image
+pixel that is under the mouse cursor. It is updated only when cursor is moved,
+so if the image was zoomed etc. from keyboard, the values may be not valid until
+you move the cursor again.
+<P></P>
+<LI><B>Pixel [ I ] {RGB}</B> is RGB values and, if present, extra channels' values of
+the pixel under cursor. In indexed mode, all that is preceded by its palette
+index: "<B>[7] = {124,214,255} + {255,,}</B>" is palette colour 7, with red channel
+value 124, green 214, blue 255, with alpha 255, and with selection and mask
+channels absent in the image. Same as coordinates, it is updated only when cursor
+is moved.
+<P></P>
+<LI><B>Selection Geometry</B>, unlike the previous 3 blocks, resides close to the right
+side of the status bar. Despite the name, it is displayed not only for the
+selection and polygon tools, but also for the line tool and the gradient
+placement tool.
+<P></P>
+For the polygon tool, it shows the current number of points, and "+" if the
+polygon is yet unclosed: "<B>(3)+</B>" means you placed 3 corners of a triangle but
+have not yet closed it.
+<P></P>
+For the selection tool, it tells the pixel position of its top left corner, the
+dimensions of the selection rectangle, and angle and length of its main diagonal
+(the one going from the first chosen corner to the one opposite it):
+"<B>83,197 : 181 x 86   115.3' 200.4"</B>" means the rectangle sits at X 83 Y 197,
+is 181 pixel wide and 86 high, the diagonal is at angle 115.3 degrees and is
+200.4 pixels long.
+<P></P>
+The angles go from -180 to 180 degrees: 0 is straight up, -90 is left, 90 is
+right, +-180 is down. The labels <B>'</B> for the angle and <B>"</B> for the length
+have no meaning in themselves, they simply were there since the very first
+mtPaint version.
+<P></P>
+For the line tool, you get the position of its beginning, the X and Y offset of
+the current position (the end-to-be) relative to it, and angle and length of the
+line between them. All in the same format as for the selection tool.
+<P></P>
+For the gradient placement tool, it is the same as for the line tool, but the
+block stays there after the second end is placed. For this reason, the gradient
+placement tool is also the tool of choice for measuring distances and angles on
+the canvas.
+<P></P>
+<LI><B>Undo / Redo</B>, the final block on the right, displays the current number of
+undo and redo frames: "<B>2+1</B>" means you can undo two operations, or redo one.
+</UL>
+
+<HR NOSHADE SIZE=1>
+
+<!-- html code generated by txt2tags 2.6.1171 (http://txt2tags.org) -->
+<!-- cmdline: txt2tags -t html -o ../docs/en_GB/chap_05.html chap_05.t2t -->
+</BODY></HTML>

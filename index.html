@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <button onclick="goTo('index.html')">Home</button>
+      <button onclick="goTo('b2.html')">Learning Hub</button>
+      <button onclick="goTo('b3.html')">Health Corner</button>
+      <button class="signin" onclick="goTo('signin.html')">Sign in</button>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Welcome to Apsu's Portfolio!</h1>
+    <h2>Featured Projects:</h2>
+
+<div class="projects">
+  <div class="project-card" onclick="goTo('b2.html')">
+    <div class="image-wrapper">
+      <img src="SmartFrog.png" alt="Learning Hub" />
+      <div class="overlay-text">Learning Hub</div>
+    </div>
+  </div>
+
+  <div class="project-card" onclick="goTo('b3.html')">
+    <div class="image-wrapper">
+      <img src="DotorOwl.png" alt="Health Corner" />
+      <div class="overlay-text">Health Corner</div>
+    </div>
+  </div>
+</div>
+
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
